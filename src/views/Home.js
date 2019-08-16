@@ -117,7 +117,7 @@ class Home extends React.Component {
                     <Grid item xs={9}>
                       <TextField
                         id="originalUrl"
-                        type="url"
+                        type="text"
                         label="Shorten your link"
                         name="originalUrl"
                         value={linkFormData.link}

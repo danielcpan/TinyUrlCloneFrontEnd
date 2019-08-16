@@ -97,7 +97,7 @@ class Analytics extends React.Component {
                     <Grid item xs={7} sm={8} md={9}>
                       <TextField
                         id="tinyUrl"
-                        type="url"
+                        type="text"
                         label="tiny-url-clone-api.herokuapp.com link to search"
                         name="tinyUrl"
                         value={tinyUrl}
