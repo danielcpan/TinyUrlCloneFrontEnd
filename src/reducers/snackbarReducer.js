@@ -5,7 +5,7 @@ import {
 
 const initialState = {
   open: false,
-  duration: 2000,
+  duration: 3000,
   variant: 'info',
   msg: 'test',
 };
@@ -16,7 +16,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         open: true,
-        duration: action.payload.duration || 2000,
+        duration: action.payload.duration || 3000,
         variant: action.payload.variant || 'info',
         msg: action.payload.msg,
       };

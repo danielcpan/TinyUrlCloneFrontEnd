@@ -18,6 +18,8 @@ import CardSummary from './CardSummary';
 const DashboardSummary = (props) => {
   const { link } = props;
 
+  const date = (link.visits[0]) ? format(link.visits[0].createdAt, 'MMM DD, YYYY') : 'N/A'
+
   return (
     <Container>
       <Grid container spacing={2}>
@@ -42,7 +44,7 @@ const DashboardSummary = (props) => {
         <Grid item xs={12} sm={6} md={3}>
           <CardSummary
             title="Most from: "
-            body={link.topCountry.code}
+            body={(link.topCountry) ? link.topCountry.code : 'N/A'}
             icon={<PlaceIcon />}
             color={green[600]}
           />
@@ -51,7 +53,7 @@ const DashboardSummary = (props) => {
         <Grid item xs={12} sm={6} md={3}>
           <CardSummary
             title="Last visit: "
-            body={format(link.visits[0].createdAt, 'MMM DD, YYYY')}
+            body={date}
             icon={<EventIcon />}
             color="#d32f2f"
           />

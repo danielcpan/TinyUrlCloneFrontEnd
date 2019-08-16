@@ -20,7 +20,7 @@ import { createLink } from '../actions/linkActions';
 import { displaySnackbar } from '../actions/snackbarActions';
 
 const URL_REGEX = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)/;
-const SAME_URL_REGEX = /^http:\/\/example\.com/;
+const SAME_URL_REGEX = /^https?:\/\/tiny-url-clone-api.herokuapp\.com/;
 
 const styles = (theme) => ({
   heroContent: {
@@ -29,6 +29,7 @@ const styles = (theme) => ({
   shortenButton: {
     width: '100%',
     lineHeight: 3.2,
+    backgroundColor: 'white'
   },
   list: {
     backgroundColor: theme.palette.background.paper,
@@ -71,7 +72,7 @@ class Home extends React.Component {
     }
 
     if (SAME_URL_REGEX.test(linkFormData.originalUrl)) {
-      errors.push('That is already a ____ link!');
+      errors.push('That is already a tiny-url-clone-api.herokuapp.com link!');
     }
 
     if (errors.length === 0) {
@@ -125,6 +126,7 @@ class Home extends React.Component {
                         fullWidth
                         error={originalUrlErrors.length > 0}
                         helperText={(originalUrlErrors) ? originalUrlErrors[0] : ''}
+                        style={{ backgroundColor: 'white' }}
                       />
                     </Grid>
                     <Grid item xs={3}>

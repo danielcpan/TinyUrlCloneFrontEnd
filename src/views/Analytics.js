@@ -16,7 +16,7 @@ import DashboardSummary from '../components/DashboardSummary';
 import { getLinkAnalytics, resetCurrentLink } from '../actions/linkActions';
 
 const URL_REGEX = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)/;
-const SAME_URL_REGEX = /^http:\/\/example\.com/;
+const SAME_URL_REGEX = /^https?:\/\/tiny-url-clone-api.herokuapp\.com/;
 
 const styles = (theme) => ({
   heroContent: {
@@ -25,6 +25,7 @@ const styles = (theme) => ({
   shortenButton: {
     width: '100%',
     lineHeight: 3.2,
+    backgroundColor: 'white'
   },
 });
 
@@ -56,13 +57,13 @@ class Analytics extends React.Component {
       errors.push('Cannot be empty');
     }
 
-    // if (URL_REGEX.test(tinyUrl) === false) {
-    //   errors.push('Invalid Url')
-    // }
+    if (URL_REGEX.test(tinyUrl) === false) {
+      errors.push('Invalid Url')
+    }
 
-    // if (SAME_URL_REGEX.test(tinyUrl) === false) {
-    //   errors.push('Search for a ____ link!')
-    // }
+    if (SAME_URL_REGEX.test(tinyUrl) === false) {
+      errors.push('That is already a tiny-url-clone-api.herokuapp.com link!');
+    }
 
     const tinyUrlId = tinyUrl.substr(tinyUrl.lastIndexOf('/') + 1);
 
@@ -97,7 +98,7 @@ class Analytics extends React.Component {
                       <TextField
                         id="tinyUrl"
                         type="url"
-                        label="____ link to search"
+                        label="tiny-url-clone-api.herokuapp.com link to search"
                         name="tinyUrl"
                         value={tinyUrl}
                         onChange={this.onChange}
@@ -105,6 +106,7 @@ class Analytics extends React.Component {
                         fullWidth
                         error={tinyUrlErrors.length > 0}
                         helperText={(tinyUrlErrors) ? tinyUrlErrors[0] : ''}
+                        style={{ backgroundColor: 'white' }}
                       />
                     </Grid>
                     <Grid item xs={5} sm={4} md={3}>

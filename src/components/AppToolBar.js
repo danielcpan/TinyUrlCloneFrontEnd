@@ -25,7 +25,7 @@ const AppToolBar = () => {
       <Toolbar variant="dense" className={classes.toolbar}>
         <Typography variant="h5" color="inherit" noWrap className={classes.toolbarTitle}>
           <Link to="/" className={classes.link}>
-            Bitly Clone
+            Tiny Url Clone
           </Link>
         </Typography>
         <nav>

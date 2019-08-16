@@ -42,6 +42,14 @@ export const createLink = (data) => async (dispatch) => {
       payload: response.data,
     });
   } catch (err) {
+    const snackbarPayload = {
+      variant: 'error',
+      msg: err.response.data.message,
+    };
+    dispatch({
+      type: DISPLAY_SNACKBAR,
+      payload: snackbarPayload,
+    });    
     dispatch({
       type: 'CREATE_LINK_ERROR',
       error: err.response.data,
