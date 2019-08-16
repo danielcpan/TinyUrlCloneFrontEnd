@@ -15,7 +15,7 @@ import VisitsTable from '../components/VisitsTable';
 import DashboardSummary from '../components/DashboardSummary';
 import { getLinkAnalytics, resetCurrentLink } from '../actions/linkActions';
 
-const URL_REGEX = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)/;
+const URL_REGEX = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/;
 const SAME_URL_REGEX = /^https?:\/\/tiny-url-clone-api.herokuapp\.com/;
 
 const styles = (theme) => ({
