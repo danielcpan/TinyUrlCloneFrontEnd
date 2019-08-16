@@ -9,7 +9,7 @@ import {
 
 export const getLinkAnalytics = (tinyUrlId) => async (dispatch) => {
   try {
-    const response = await axios.get(`/api/links/analytics/${tinyUrlId}`);
+    const response = await axios.get(`https://tiny-url-clone-api.herokuapp.com/api/links/analytics/${tinyUrlId}`);
     dispatch({
       type: GET_LINK_ANALYTICS,
       payload: response.data,
@@ -36,7 +36,7 @@ export const resetCurrentLink = () => async (dispatch) => {
 
 export const createLink = (data) => async (dispatch) => {
   try {
-    const response = await axios.post('/api/links', data);
+    const response = await axios.post('https://tiny-url-clone-api.herokuapp.com/api/links', data);
     dispatch({
       type: CREATE_LINK,
       payload: response.data,
