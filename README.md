@@ -1,68 +1,33 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**TinyUrlClone is a URL shortner just like TinyUrl and Bitly**  
+**Note, because I cannot purchase my own custom domain, this project's frontend is hosted on netlify and it's api on heroku. Because of this, the original url is really long and thus has no real world use case. Was made to simply demonstrate how to make a real world url shortner**
 
-## Available Scripts
+Check out the app! https://tiny-url-clone.netlify.com
 
-In the project directory, you can run:
+## Budget App using the following technologies:
 
-### `npm start`
+### BackEnd: 
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Engine: Nodejs
+- Server:  Express
+- ORM: Mongoose
+- Database: MongoDb
+- REST
+- Test Frameworks: Mocha + Chai
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+### FrontEnd: 
 
-### `npm test`
+- Main Frontend Framework: Reactjs
+- State Management: Redux
+- Style Framework: Material UI
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### CRUD Functionality for links as well as keeps track of link visit anayltics such as clicks, unique clicks, ip, and geolocation.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Shorten Link
+![ShortenUrl](https://user-images.githubusercontent.com/20826907/63155035-b275b880-bfc6-11e9-8df8-5b07e69e7a81.gif)
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+#### Open Shortned Link
+![UseShortenedUrl](https://user-images.githubusercontent.com/20826907/63155036-b275b880-bfc6-11e9-8a34-e2d01164a3e7.gif)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+#### Check Out Link Analytics
+![GetLinkAnalytics](https://user-images.githubusercontent.com/20826907/63155037-b275b880-bfc6-11e9-9da8-dbdbe5858516.gif)
