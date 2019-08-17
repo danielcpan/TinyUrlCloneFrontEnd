@@ -7,9 +7,17 @@ import {
   DISPLAY_SNACKBAR,
 } from '../constants/actionTypes';
 
+const env = process.env.NODE_ENV || 'development';
+const config = require('../config/config')[env];
+console.log("process.env.NODE_ENV: " + process.env.NODE_ENV)
+console.log("env: " + env)
+console.log("config: ")
+console.log(config)
+console.log("config.API_URL: " + config.API_URL)
+
 export const getLinkAnalytics = (tinyUrlId) => async (dispatch) => {
   try {
-    const response = await axios.get(`https://tiny-url-clone-api.herokuapp.com/api/links/analytics/${tinyUrlId}`);
+    const response = await axios.get(`${config.API_URL}/api/links/analytics/${tinyUrlId}`);
     dispatch({
       type: GET_LINK_ANALYTICS,
       payload: response.data,
@@ -36,7 +44,7 @@ export const resetCurrentLink = () => async (dispatch) => {
 
 export const createLink = (data) => async (dispatch) => {
   try {
-    const response = await axios.post('https://tiny-url-clone-api.herokuapp.com/api/links', data);
+    const response = await axios.post(`${config.API_URL}/api/links`, data);
     dispatch({
       type: CREATE_LINK,
       payload: response.data,
