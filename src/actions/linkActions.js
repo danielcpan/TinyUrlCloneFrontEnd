@@ -9,12 +9,6 @@ import {
 
 const env = process.env.NODE_ENV || 'development';
 const config = require('../config/config')[env];
-console.log("process.env.NODE_ENV: " + process.env.NODE_ENV)
-console.log("env: " + env)
-console.log("config: ")
-console.log(config)
-console.log("config.API_URL: " + config.API_URL)
-console.log(process.env.API_URL)
 
 export const getLinkAnalytics = (tinyUrlId) => async (dispatch) => {
   try {
