@@ -3,6 +3,8 @@
 
 Check out the app! https://tiny-url-clone.netlify.com
 
+Api Repo: https://github.com/danielcpan/TinyUrlCloneAPI
+
 ## TinyUrlClone uses the following technologies:
 
 ### BackEnd: 
